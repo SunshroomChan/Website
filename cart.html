@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My sell website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+
+    <script src="https://kit.fontawesome.com/95b5cd4c14.js" crossorigin="anonymous"></script>
+    <style>
+        .cart-checkbox {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .cart_header {
+            align-items: center;
+            background: #fff;
+            border-radius: .125rem;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+            color: #888;
+            display: flex;
+            font-size: 14px;
+            height: 55px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        .cart_header_item-product {
+            width: 42%;
+            margin-left: 20px;
+        }
+
+        .cart_header_item {
+            width: 15%;
+            padding: 8px 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart_product {
+            display: flex;
+            border: 1px solid #ccc;
+            padding: 8px 8px;
+            position: relative;
+        }
+
+        .cart_product-title {
+            margin-left: 20px;
+        }
+
+        .cart_product-img {
+            width: 80px;
+        }
+
+        .cart_product-title {
+            display: flex;
+            width: 42%;
+        }
+
+        .cart_product-list {
+            width: 15%;
+            font-size: 14px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart_product-list-add {
+            display: flex;     
+
+        }
+
+        .cart_product-list-add-btn,
+        .cart_product-list-add-text {
+            border: none;
+        }
+
+        .cart_product-list-add-btn {
+            border: 1px solid #ccc;
+        }
+
+        .cart_product-list-add-text {
+            border: 1px solid #ccc
+        }
+
+        .cart_product-list-add-text {
+            width: 50px;
+           
+            outline: none;
+        }
+
+        .cart_product-list-item {
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            font-size: 15px;
+        }
+
+        .cart_product-list-del-btn {
+            border: none;
+            background-color: var(--white-color);
+            cursor: pointer;
+            cursor: pointer;
+        }
+
+        .cart_product-list-del-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .cart_payment {
+            align-items: center;
+            background: #fff;
+            border-radius: .125rem;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+            color: #888;
+            display: flex;
+            font-size: 14px;
+            height: 55px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        .cart_footer_item-product {
+
+            margin-left: 20px;
+        }
+
+        .cart_footer_item {
+            width: 15%;
+            padding: 8px 8px;
+
+        }
+
+        .cart_footer_item-del {
+            width: 50%;
+            cursor: pointer;
+        }
+
+        .cart_payment-btn {
+            color: var(--white-color);
+            background-color: var(--primary-color);
+            border: none;
+            font-size: 15px;
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Giỏ hàng</h1>
+    <div class="grid">
+        <div class="cart_header">
+            <div class="cart-checkbox">
+                <input type="checkbox">
+            </div>
+
+            <div class="cart_header_item-product"> Sản phẩm </div>
+            <div class="cart_header_item"> Đơn giá </div>
+            <div class="cart_header_item"> Số lượng</div>
+            <div class="cart_header_item"> Số tiền</div>
+            <div class="cart_header_item"> Thao tác </div>
+
+        </div>
+        <div class="cart_product">
+            <div class="cart-checkbox">
+                <input type="checkbox">
+            </div>
+
+            <div class="cart_product-title">
+                <img src="image/mypham.png" alt="" class="cart_product-img">
+                <h3 class="cart_product-title">Lorem ipsum dolor sit amet consectetur adipisicing eli.</h3>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item">150.000</span>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item cart_product-list-add ">
+                    <button class="cart_product-list-add-btn">-</button>
+                    <input type="text" class="cart_product-list-add-text">
+                    <button class="cart_product-list-add-btn">+</button>
+                </span>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item">150.000</span>
+            </div>
+            <div class="cart_product-list">
+                <button class="cart_product-list-item cart_product-list-del-btn">Xóa</button>
+            </div>
+
+        </div>
+        <div class="cart_product">
+            <div class="cart-checkbox">
+                <input type="checkbox">
+            </div>
+
+            <div class="cart_product-title">
+                <img src="image/mypham.png" alt="" class="cart_product-img">
+                <h3 class="cart_product-title">Lorem ipsum dolor sit amet consectetur adipisicing eli.</h3>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item">150.000</span>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item cart_product-list-add ">
+                    <button class="cart_product-list-add-btn">-</button>
+                    <input type="text" class="cart_product-list-add-text">
+                    <button class="cart_product-list-add-btn">+</button>
+                </span>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item">150.000</span>
+            </div>
+            <div class="cart_product-list">
+                <button class="cart_product-list-item cart_product-list-del-btn">Xóa</button>
+            </div>
+
+        </div>
+        <div class="cart_product">
+            <div class="cart-checkbox">
+                <input type="checkbox">
+            </div>
+
+            <div class="cart_product-title">
+                <img src="image/mypham.png" alt="" class="cart_product-img">
+                <h3 class="cart_product-title">Lorem ipsum dolor sit amet consectetur adipisicing eli.</h3>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item">150.000</span>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item cart_product-list-add ">
+                    <button class="cart_product-list-add-btn">-</button>
+                    <input type="text" class="cart_product-list-add-text">
+                    <button class="cart_product-list-add-btn">+</button>
+                </span>
+            </div>
+            <div class="cart_product-list">
+                <span class="cart_product-list-item">150.000</span>
+            </div>
+            <div class="cart_product-list">
+                <button class="cart_product-list-item cart_product-list-del-btn">Xóa</button>
+            </div>
+
+        </div>
+        <div class="cart_payment">
+
+            <div class="cart-checkbox">
+                <input type="checkbox">
+            </div>
+
+            <div class="cart_footer_item"> Chọn tất cả (3)</div>
+            <div class="cart_footer_item-del">Xóa</div>
+
+            <div class="cart_footer_item">Tổng thanh toán(0 sản phẩm)</div>
+            <div class="cart_footer_item">
+                <button class="cart_payment-btn">
+                    Mua hàng
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>
+</div>

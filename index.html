@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Shop - Hàng xách tay Pháp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/95b5cd4c14.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Block Element Modifier - BEM -->
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item-qr header__navbar-item--separate">
+                            Vào cửa hàng trên ứng dụng Paris-shop
+
+                            <!-- header QR code -->
+                            <div class="header__qr">
+                                <img src="image/QR.png" alt="QR code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="image/gg_play.png" alt="Google play" class="header__qr-download-img">
+                                    </a>
+
+                                    <a href="" class="header__qr-link">
+                                        <img src="image/app_store.png" alt="App Store" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-poiter">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify ">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="notify">
+                                <header class="notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="notify-list">
+                                    <li class="notify-item notify-item--viewed ">
+                                        <a href="" class="notify-link">
+                                            <span><img src="image/mypham.png" alt="" class="notify-img"></span>
+                                            <div class="notify-info">
+                                                <span class="notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                                <span class="notify-descriotion">Mô tả mỹ phẩm Ohui chính hãng Lorem
+                                                    ipsum dolor sit amet consectetur, adipisicing elit. Ad dolore, harum
+                                                    veritatis blanditiis at laborum, ut ducimus ullam ex numquam nisi
+                                                    aliquid eligendi dignissimos odit, commodi facere atque earum
+                                                    placeat.</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notify-item notify-item--viewed">
+                                        <a href="" class="notify-link">
+                                            <span><img src="image/mypham.png" alt="" class="notify-img"></span>
+                                            <div class="notify-info">
+                                                <span class="notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                                <span class="notify-descriotion">Mô tả mỹ phẩm Ohui chính hãng Lorem
+                                                    ipsum dolor sit amet consectetur, adipisicing elit. Esse quae, saepe
+                                                    dicta incidunt doloremque, voluptas possimus et eum aspernatur,
+                                                    obcaecati nihil facilis accusantium. Facilis atque saepe, enim
+                                                    voluptatum recusandae iure!</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notify-item notify-item--viewed">
+                                        <a href="" class="notify-link">
+                                            <span><img src="image/mypham.png" alt="" class="notify-img"></span>
+                                            <div class="notify-info">
+                                                <span class="notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                                <span class="notify-descriotion">Mô tả mỹ phẩm Ohui chính hãng Lorem
+                                                    ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quod
+                                                    nam quas maiores, officia dicta minima dolore repellendus minus
+                                                    deleniti iste accusamus tenetur. Ducimus corporis, quibusdam
+                                                    assumenda dicta natus dolor.</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="notify-footer">
+                                    <a href="" class="notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-circle-info"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                            <a href="dangky.html" class="header__navbar-item-link">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong">
+                            <a href="dangnhap.html" class="header__navbar-item-link">Đăng nhập</a>
+                        </li>
+                        <!-- <li class="header__navbar-item header__navbar-user">
+                            <img src="image/anhnen212.jpg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Garden</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="info-user.html">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua </a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item-separates">
+                                    <a href="">
+                                        Đăng xuất
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        -->
+                    </ul>
+                </nav>
+
+                <!-- Header with search -->
+                <div class="header-with-search">
+                    <div class="header_logo">
+                        <span class="header_logo-img"> <img src="image/logo-thoi-trang.png" alt="">
+                        </span>
+                    </div>
+
+                    <div class="header_search">
+                        <div class="header_search-input-wrap">
+                            <input type="text" class="header_search-input" placeholder="Tìm kiếm sản phẩm">
+
+                            <!-- search history -->
+                            <div class="header_search-history">
+                                <h3 class="search-history-heading">
+                                    Lịch sử tìm kiếm
+                                </h3>
+                                <ul class="search-history-list">
+                                    <li class="search-history-list-item">
+                                        <a href="">Kem dưỡng da</a>
+
+                                    </li>
+                                    <li class="search-history-list-item">
+                                        <a href="">Kem trị mụn</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="header_search-btn">
+                            <i class=" search-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                    </div>
+                    <!-- cart layout -->
+                    <div class="header_cart">
+                        <div class="header_cart-wrap">
+                            <i class="header_cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header_cart-notice">
+                                3
+                            </span>
+
+                            <!-- No cart: header_cart-list--no-cart: class trường hợp không có sản phẩm thay vào no_cart  -->
+                            <div class="header_cart-list no_cart">
+                                <img src="image/cart.png" alt="" class="header_cart--no-cart--img">
+                                <span class="header_cart-no-cart-text">
+                                    Chưa có sản phẩm
+                                </span>
+
+                                <h4 class="header_cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header_cart-list-item">
+
+                                    <!-- Cart item -->
+                                    <li class="header_cart-item">
+                                        <img src="image/mypham.png" alt="" class="header__cart-img">
+                                        <div class="header_cart-item-info">
+                                            <div class="header_cart-item-head">
+                                                <h5 class="header_cart-item-name">
+                                                    Bộ kem đặc trị vùng mắt
+                                                </h5>
+                                                <div class="header_cart-item-price-wrap">
+                                                    <span class="header_cart-item-price">2.000.000đ</span>
+                                                    <span class="header_cart-item-multiply">x</span>
+                                                    <span class="header_cart-item-qnt">2</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="header_cart-item-body">
+                                                <span class="header_cart-item-description">
+                                                    Phân loại: Mỹ phẩm
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_cart-item">
+                                        <img src="image/mypham.png" alt="" class="header__cart-img">
+                                        <div class="header_cart-item-info">
+                                            <div class="header_cart-item-head">
+                                                <h5 class="header_cart-item-name">
+                                                    Bộ kem đặc trị vùng mắt
+                                                </h5>
+                                                <div class="header_cart-item-price-wrap">
+                                                    <span class="header_cart-item-price">2.000.000đ</span>
+                                                    <span class="header_cart-item-multiply">x</span>
+                                                    <span class="header_cart-item-qnt">2</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="header_cart-item-body">
+                                                <span class="header_cart-item-description">
+                                                    Phân loại: Mỹ phẩm
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_cart-item">
+                                        <img src="image/mypham.png" alt="" class="header__cart-img">
+                                        <div class="header_cart-item-info">
+                                            <div class="header_cart-item-head">
+                                                <h5 class="header_cart-item-name">
+                                                    Bộ kem đặc trị vùng mắt
+                                                </h5>
+                                                <div class="header_cart-item-price-wrap">
+                                                    <span class="header_cart-item-price">2.000.000đ</span>
+                                                    <span class="header_cart-item-multiply">x</span>
+                                                    <span class="header_cart-item-qnt">2</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="header_cart-item-body">
+                                                <span class="header_cart-item-description">
+                                                    Phân loại: Mỹ phẩm
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <a href="cart.html" class="header_cart-view-cart  button button--primary">Xem giỏ hàng</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </header>
+    </div>
+    <section class="slider">
+        <div class="slider_container">
+            <div class="slider_container-item">
+                <div class="slider_container-item-left">
+                    <a href="">
+                        <img src="image/banner1.webp" alt="">
+                    </a>
+                    <a href="">
+                        <img src="image/banner2.webp" alt="">
+                    </a>
+
+                    <div class="slider_container-item-left-btn">
+                        <i class=" fa-solid fa-chevron-left"></i>
+                        <i class=" fa-solid fa-chevron-right"></i>
+
+                    </div>
+                    <script src="script.js"></script>
+                </div>
+
+                <div class="slider_container-item-right">
+                    <img src="image/banner1.webp" alt="" class="slider_container-item-right-slider">
+                    <img src="image/banner2.webp" alt=""
+                        class="slider_container-item-right-slider slider_container-item-right-slider2">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="app__container">
+        <div class="grid">
+            <div class="grid_row app__content">
+                <div class="grid_column-2">
+                    <nav class="category">
+                        <h3 class="category__heading">
+                            <i class="category__heading-icon fa-solid fa-list"></i>
+                            Danh mục
+                        </h3>
+
+                        <ul class="category-list">
+                            <li class="category-item category-item--active">
+                                <a href="#" class="category-item__link">Sản phẩm</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Trang điểm môi </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Trang điểm mắt</a>
+                            </li>  
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="grid_column-10">
+                    <div class="home-filter">
+                        <span class="home-filter_label">Sắp xếp theo</span>
+                        <button class=" home-filter_btn button">Phổ biến</button>
+                        <button class="home-filter_btn button button--primary">Mới nhất</button>
+                        <button class="home-filter_btn button">Bán chạy</button>
+
+                        <div class="select_input">
+                            <span class="select-input__label">
+                                Giá
+                            </span>
+                            <i class="select-input__icon fa-solid fa-caret-down"></i>
+                            <!-- List options -->
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link">Giá từ thấp đến cao</a>
+                                </li>
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link">Giá từ cao đến thấp</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">
+                                    1</span>/14
+                            </span>
+
+                            <div class="home-filter__page-control">
+                                <a href="" class="home-filter__page-btn home-filter__page-btn-disable">
+                                    <p class="home-filter__page-icon">
+                                        < </p>
+                                </a>
+                                <a href="" class="home-filter__page-btn">
+                                    <p class="home-filter__page-icon"> ></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home-product">
+                        <!-- Grid -> row -> column -->
+
+                        <div class="gird_row">
+                            <!-- Product item -->
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid_column-2-4">
+                                <a href=" " class="home-product-item">
+                                    <div class="home-product-item_img"
+                                        style="background-image: url('image/mypham.png');"> </div>
+                                    <h4 class="home-product-item_name"> Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Eum nulla quasi quo cumque quos modi.</h4>
+                                    <div class="home-product-item_price">
+                                        <span class="home-product-item_price-old">
+                                            1.200.000đ
+                                        </span>
+                                        <span class="home-product-item_price-current">
+                                            999.000đ
+                                        </span>
+
+
+                                    </div>
+                                    <div class="home-product-item_action">
+                                        <span class="home-product-item_like home-product-item_like-liked">
+                                            <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                            <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+
+                                        </span>
+                                        <div class="home-product-item_rating">
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item_star-gold fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item_sold">88 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item_origin">
+                                        <span class="home-product-item_origin-brand">Whoo</span>
+                                        <span class="home-product-item_origin-name">TP.Hà Nội</span>
+                                    </div>
+                                    <div class="home-product-item_favorite">
+                                        <i class="fa-solid fa-check"></i>
+                                        <span> Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item_sale-off">
+                                        <span class="home-product-item_sale-off-percent">40%</span>
+                                        <span class="home-product-item_sale-off-label">GIẢM</span>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <ul class="pagination home-product_pagination">
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">
+                                <i class="pagination-item_icon fa-solid fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="pagination-item pagination-item--active">
+                            <a href="" class="pagination-item_link">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">4</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">5</a>
+                        </li>
+
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">14</a>
+                        </li>
+
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item_link">
+                                <i class="pagination-item_icon fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="gird_row">
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">
+                        Chăm sóc khách hàng
+                    </h3>
+                    <ul class="footer_list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">
+                        Giới thiệu
+                    </h3>
+                    <ul class="footer_list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Giới thiệu</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Điều khoản</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">
+                        Danh mục
+                    </h3>
+                    <ul class="footer_list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Quần áo</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Phụ kiện</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">
+                        Theo dõi
+                    </h3>
+                    <ul class="footer_list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">
+                                <i class="footer-item-icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">
+                                <i class="footer-item-icon fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">
+                        Vào cửa hàng trên ứng dụng
+                    </h3>
+                    <div class="footer_dowload">
+                        <img src="image/QR.png" alt="" class="footer_dowload-qr">
+                        <div class="footer_dowload-apps">
+                            <img src="image/gg_play.png" alt="" class="footer_dowload-apps-img">
+                            <img src="image/app_store.png" alt="" class="footer_dowload-apps-img">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
