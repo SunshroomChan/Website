@@ -13,13 +13,36 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
+// Kiểm tra xem cơ sở dữ liệu có tồn tại hay không
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($conn->query($sql) === TRUE) {
+    echo "Cơ sở dữ liệu đã được tạo thành công.";
+} else {
+    die("Lỗi khi tạo cơ sở dữ liệu: " . $conn->error);
+}
+
+$sql = "CREATE TABLE IF NOT EXISTS khachhang (
+    id_kh INT(11) AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    sdt VARCHAT(255) NULL,
+    password VARCHAR(255) NOT NULL,
+    ngaysinh DATE NULL,
+    gioitinh VARCHAR(255) NULL,
+    anhavt LONGBLOB NULL,
+    id_role INT NOT NULL,
+    FOREIGN KEY (id_role) REFERENCES phanquyen(id_role),
+    CREATE_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UPDATE_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $_POST['username'];
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
     // Kiểm tra xem username hoặc email đã tồn tại chưa
-    $sql_check = "SELECT * FROM users WHERE username = ? OR email = ?";
+    $sql_check = "SELECT * FROM khachhang WHERE username = ? OR email = ?";
     $stmt_check = $conn->prepare($sql_check);
     $stmt_check->bind_param("ss", $user, $email);
     $stmt_check->execute();
@@ -31,10 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Mã hóa mật khẩu
         $password_hashed = password_hash($pass, PASSWORD_DEFAULT);
 
+        // Phân quyền cho người dùng
+        // Note: 1 - Admin, 2 - NhanVien, 3 - KhachHang
+        $role = 3;
+
         // Chuẩn bị truy vấn SQL để thêm người dùng mới
-        $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO khachhang (username, email, password, id_role) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $user, $email, $password_hashed);
+        $stmt->bind_param("sss", $user, $email, $password_hashed, $role);
 
         // Thực thi truy vấn và kiểm tra kết quả
         if ($stmt->execute()) {

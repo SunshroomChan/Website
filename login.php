@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pass = $_POST['password'];
 
     // Chuẩn bị truy vấn SQL để kiểm tra username hoặc email
-    $sql = "SELECT * FROM users WHERE username = ? OR email = ?";
+    $sql = "SELECT * FROM khachhang WHERE username = ? OR email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $user_or_email, $user_or_email);
     $stmt->execute();
@@ -27,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Kiểm tra nếu người dùng đăng nhập bằng username hoặc email?
     if(filter_var($input, FILTER_VALIDATE_EMAIL)){
         // Cho xử lý dưới dạng email
-        $query = "SELECT * FROM users WHERE email = ?";
+        $query = "SELECT * FROM khachhang WHERE email = ?";
     } else {
         // Cho xử lý dưới dạng username
-        $query = "SELECT * FROM users WHERE username = ?";
+        $query = "SELECT * FROM khachhang WHERE username = ?";
     }
 
     // Kiểm tra nếu người dùng tồn tại
