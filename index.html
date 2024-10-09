@@ -179,96 +179,26 @@
 
                     </div>
                     <!-- cart layout -->
+                    <?php include 'session_check.php'; ?>
                     <div class="header_cart">
                         <div class="header_cart-wrap">
                             <i class="header_cart-icon fa-solid fa-cart-shopping"></i>
                             <span class="header_cart-notice">
-                                3
+                                <?php if($is_logged_in == true): ?>
+                                    <?php echo count($_SESSION['cart']); ?>
+                                <?php else: ?>
+                                    0
+                                <?php endif; ?>
                             </span>
-
+                    
                             <!-- No cart: header_cart-list--no-cart: class trường hợp không có sản phẩm thay vào no_cart  -->
                             <div class="header_cart-list no_cart">
-                                <img src="image/cart.png" alt="" class="header_cart--no-cart--img">
-                                <span class="header_cart-no-cart-text">
-                                    Chưa có sản phẩm
-                                </span>
-
-                                <h4 class="header_cart-heading">Sản phẩm đã thêm</h4>
-                                <ul class="header_cart-list-item">
-
-                                    <!-- Cart item -->
-                                    <li class="header_cart-item">
-                                        <img src="image/mypham.png" alt="" class="header__cart-img">
-                                        <div class="header_cart-item-info">
-                                            <div class="header_cart-item-head">
-                                                <h5 class="header_cart-item-name">
-                                                    Bộ kem đặc trị vùng mắt
-                                                </h5>
-                                                <div class="header_cart-item-price-wrap">
-                                                    <span class="header_cart-item-price">2.000.000đ</span>
-                                                    <span class="header_cart-item-multiply">x</span>
-                                                    <span class="header_cart-item-qnt">2</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="header_cart-item-body">
-                                                <span class="header_cart-item-description">
-                                                    Phân loại: Mỹ phẩm
-                                                </span>
-
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header_cart-item">
-                                        <img src="image/mypham.png" alt="" class="header__cart-img">
-                                        <div class="header_cart-item-info">
-                                            <div class="header_cart-item-head">
-                                                <h5 class="header_cart-item-name">
-                                                    Bộ kem đặc trị vùng mắt
-                                                </h5>
-                                                <div class="header_cart-item-price-wrap">
-                                                    <span class="header_cart-item-price">2.000.000đ</span>
-                                                    <span class="header_cart-item-multiply">x</span>
-                                                    <span class="header_cart-item-qnt">2</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="header_cart-item-body">
-                                                <span class="header_cart-item-description">
-                                                    Phân loại: Mỹ phẩm
-                                                </span>
-
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header_cart-item">
-                                        <img src="image/mypham.png" alt="" class="header__cart-img">
-                                        <div class="header_cart-item-info">
-                                            <div class="header_cart-item-head">
-                                                <h5 class="header_cart-item-name">
-                                                    Bộ kem đặc trị vùng mắt
-                                                </h5>
-                                                <div class="header_cart-item-price-wrap">
-                                                    <span class="header_cart-item-price">2.000.000đ</span>
-                                                    <span class="header_cart-item-multiply">x</span>
-                                                    <span class="header_cart-item-qnt">2</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="header_cart-item-body">
-                                                <span class="header_cart-item-description">
-                                                    Phân loại: Mỹ phẩm
-                                                </span>
-
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <a href="cart.html" class="header_cart-view-cart  button button--primary">Xem giỏ hàng</a>
+                                <?php if($is_logged_in == false): ?>
+                                    <a href="cart.html" class="header_cart-view-cart button button--primary">Xem giỏ hàng</a>
+                                <?php else: ?>
+                                    <a href="dangnhap.html" class="header_cart-view-cart button button--primary">Đăng nhập/Đăng ký để xem giỏ hàng</a>
+                                <?php endif; ?>
                             </div>
-
-
                         </div>
                     </div>
 

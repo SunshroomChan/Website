@@ -30,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $row = $result->fetch_assoc();
             // Kiểm tra mật khẩu
             if (password_verify($pass, $row['password'])) {
+                // Đăng nhập thành công, thiết lập session
+                session_start();
+                $_SESSION['user_id'] = $row['id_kh'];
                 echo "Đăng nhập thành công!";
             } else {
                 echo "Sai tên người dùng hoặc mật khẩu.";
