@@ -71,6 +71,85 @@ function displaySearchHistory() {
     });
 }
 
+function validatePassword() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm_password").value;
+    var errorMessage = document.getElementById("error_message");
+
+    if (password !== confirmPassword) {
+        errorMessage.textContent = "Mật khẩu nhập lại không khớp.";
+        return false; // Prevent form submission
+    } else {
+        errorMessage.textContent = "";
+        return true; // Allow form submission
+    }
+}
+
+// Thêm sản phẩm vào giỏ hàng
+function addToCart(productId) {
+    fetch('/add-to-cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ productId: productId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Sản phẩm đã được thêm vào giỏ hàng.');
+        } else {
+            alert('Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Xóa sản phẩm khỏi giỏ hàng
+function removeFromCart(productId) {
+    fetch('/remove-from-cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ productId: productId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Sản phẩm đã được xóa khỏi giỏ hàng.');
+        } else {
+            alert('Có lỗi xảy ra khi xóa sản phẩm khỏi giỏ hàng.');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Hiển thị giỏ hàng
+function displayCart() {
+    fetch('/display-cart.php')
+    .then(response => response.json())
+    .then(data => {
+        const cartList = document.querySelector('.cart-list');
+        cartList.innerHTML = '';
+
+        data.cartItems.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('cart-list-item');
+            listItem.innerHTML = `
+                <span>${item.productName}</span>
+                <span>${item.quantity}</span>
+                <button onclick="removeFromCart(${item.productId})">Xóa</button>
+            `;
+            cartList.appendChild(listItem);
+        });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Gọi hàm displayCart() khi tải trang
+document.addEventListener('DOMContentLoaded', displayCart);
+
 // Xóa toàn bộ lịch sử tìm kiếm
 function clearSearchHistory() {
     localStorage.removeItem('searchHistory');
